@@ -90,6 +90,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-size: 100%;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -157,7 +158,7 @@ nav a:visited {
   padding: 20px;
   text-decoration: none;
   background-color: #E0FF8D;
-  color: #222;
+  color: #646464;
   font-size: 1.5rem;
 }
 
@@ -165,4 +166,95 @@ nav a:hover,
 nav a:focus {
   background-color: #968DFF;
   color: white;
+}
+
+ul {
+  display: table;
+  margin: 1em;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font: inherit;
+}
+  
+ul li {
+  display: table-cell;
+  min-width: 50px;
+}
+  
+ul li a {
+  display: block;
+  width: 80%;
+  padding: 3em;
+  text-decoration: none;
+  color: #555;
+  font-weight: lighter;
+  color: #646464;
+}
+
+.sm a {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "facebook twitter"
+    "twitch snapchat" ;
+  text-decoration: none;
+  background-color: #E0FF8D;
+  margin: 1em;
+  width: 2em;
+  height: 2em;
+  position: relative;
+  left: 90%;
+}
+
+.sm .im-im-facebook {
+  grid-area: facebook;
+}
+
+.sm .im-im-twitter {
+  grid-area: twitter;
+}
+
+.sm .im-im-twitch {
+  grid-area: twitch;
+}
+
+.sm .im-im-snapchat {
+  grid-area: snapchat;
+}
+
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #E0FF8D;
+  }
+
+  nav a:hover,
+  nav a:focus {
+  background-color: #646464;
+  color: white;
+}
+}
+
+@media screen and (max-width: 699px) {
+  body {
+    background-color: #646464;
+  }
+
+  ul li a {
+    display: block;
+    width: 80%;
+    padding: 3em;
+    text-decoration: none;
+    font-weight: lighter;
+    color: #646464;
+  }
+
+  .sm {
+    color: black;
+  }
+
+  
+
 }
